@@ -1,17 +1,25 @@
 {
   "name": "ejs-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "blog",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "crisse soto",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "ejs": "^2.6.1",
+    "ejs": "^3.0.1",
     "express": "^4.16.3",
     "lodash": "^4.17.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crissesoto/blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/crissesoto/blog/issues"
+  },
+  "homepage": "https://github.com/crissesoto/blog#readme"
 }
