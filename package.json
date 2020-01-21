@@ -12,7 +12,8 @@
     "body-parser": "^1.18.3",
     "ejs": "^3.0.1",
     "express": "^4.16.3",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.15",
+    "truncate": "^2.1.0"
   },
   "repository": {
     "type": "git",

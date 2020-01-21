@@ -3,6 +3,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const _ = require('lodash');
+const truncate = require('truncate');
+
 const port = 3000;
 
 
@@ -29,7 +32,9 @@ app.get("/", function(req, res){
   // render home.ejs page as home route
   res.render(__dirname + "/views/home.ejs", {
     posts: posts, 
-    title:"Home"
+    title:"Home",
+    truncate: truncate,
+    _: _
   });
 });
 
@@ -42,6 +47,26 @@ app.get("/about", function(req, res){
     title: "About", 
     para: aboutContent
   });
+});
+
+
+// --------->  post page
+app.get("/posts/:postName", function(req, res){
+  const postName = _.lowerCase(req.params.postName);
+
+
+  for (let i = 0; i < posts.length; i++) {
+    const arrayTitle = _.lowerCase(posts[i].postTitle);
+    
+    if (arrayTitle === postName) {
+      console.log("match found!")
+      res.render("posts.ejs", {
+        title: posts[i].postTitle,
+        posts: posts[i].postContent
+      })
+    }
+  }
+
 });
 
 
