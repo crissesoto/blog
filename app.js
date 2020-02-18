@@ -8,9 +8,6 @@ const truncate = require('truncate');
 const mongoose = require('mongoose');
 
 
-const port = process.env.port || 4000;
-
-
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -148,12 +145,9 @@ app.post("/compose", function(req, res){
 
 
 
-
-
-
-
-
 //  ---------> Port
-app.listen(port, function(){
-  console.log(`Server started at port: ${port}`);
-})
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port);
