@@ -2,13 +2,14 @@
 <%- include("partials/header.ejs") -%>
 
 <h1><%= title %></h1>
+<p><%= para %></p>
 
 <% posts.forEach(element =>{ %>
     <div>
         <h3><%= element.postTitle %></h3>
         <p>
             <%= truncate(element.postContent,100)%> 
-            <a href="/posts/:<%= element.postTitle %>">Read More</a>
+            <a href="/posts/:<%= element._id %>">Read More</a>
         </p>
     </div>
 <% }) %>
