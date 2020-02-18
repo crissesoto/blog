@@ -9,7 +9,7 @@
   "author": "crisse soto",
   "license": "ISC",
   "engines": {
-    "node": "10.x"
+    "node": "12.14"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
