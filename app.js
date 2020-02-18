@@ -19,7 +19,7 @@ app.use(express.static("public"));
 
 
 // MongoDB AND Mongoose
-mongoose.connect('mongodb://localhost/blogsDB', {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://admin-crisse:serimi03@angelaapps-5expc.mongodb.net/blogsDB', {useNewUrlParser: true, useUnifiedTopology: true });
 
 // Checknif we connect successfully
 const db = mongoose.connection;
