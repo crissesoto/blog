@@ -15,7 +15,7 @@
     "body-parser": "^1.18.3",
     "ejs": "^3.0.1",
     "express": "^4.16.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mongodb": "^3.5.3",
     "mongoose": "^5.9.1",
     "truncate": "^2.1.0"
